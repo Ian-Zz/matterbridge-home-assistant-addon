@@ -5,16 +5,16 @@ FROM $BUILD_FROM
 ARG MATTERBRIDGE_HOME_ASSISTANT_VERSION
 
 # webinterface
-EXPOSE 8283
+EXPOSE 8293
 # websocket for the webinterface
-EXPOSE 8284
+EXPOSE 8294
 
 RUN mkdir /app
 WORKDIR /app
 
 RUN \
     npm config set legacy-peer-deps true && \
-    ln -s /config /root/.matterbridge && \
+    ln -s /config /root/.matterbridge-my && \
     MATTERBRIDGE_VERSION=$(npm view matterbridge-home-assistant@$MATTERBRIDGE_HOME_ASSISTANT_VERSION devDependencies.matterbridge) && \
     npm install -g matterbridge@$MATTERBRIDGE_VERSION && \
     npm install -g matterbridge-home-assistant@$MATTERBRIDGE_HOME_ASSISTANT_VERSION
