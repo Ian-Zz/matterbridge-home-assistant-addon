@@ -1,8 +1,8 @@
 version: 1.3.6-69
-slug: matterbridge
-name: Matterbridge
+slug: matterbridge-my
+name: Matterbridge-my
 description: Populate your Home Assistant instance as Matter Bridge
-url: https://github.com/t0bst4r/matterbridge-home-assistant-addon
+url: https://github.com/Ian-Zz/matterbridge-home-assistant-addon
 homeassistant: 2024.1.0
 homeassistant_api: true
 host_network: true
@@ -12,7 +12,7 @@ arch:
   - aarch64
   - amd64
   - armv7
-webui: http://[HOST]:[PORT:8283]/
+webui: http://[HOST]:[PORT:8293]/
 map:
   - addon_config:rw
 options:
